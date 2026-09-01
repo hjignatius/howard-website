@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Howard Ignatius is a retired high-tech marketing executive and photographer based in Morro Bay, California.",
+    "Howard Ignatius is a retired high-tech marketing executive and photographer based in Lewes, Delaware.",
 };
 
 export default function About() {
@@ -14,11 +14,11 @@ export default function About() {
 
       <div className="mt-8 space-y-6 text-base leading-relaxed text-mist">
         <p>
-          Howard Ignatius is a retired high-tech marketing executive from Morro
-          Bay, California. He grew up in Minnesota surrounded by the natural
-          beauty of Lake Superior and the great “Northland.” Upon graduation from
-          the University of Minnesota, he enlisted in the US Navy and purchased
-          his first 35mm camera and a complete darkroom.
+          Howard Ignatius is a retired high-tech marketing executive from
+          Lewes, Delaware. He grew up in Minnesota surrounded by the natural
+          beauty of Lake Superior and the great “Northland.” Upon graduation
+          from the University of Minnesota, he enlisted in the US Navy and
+          purchased his first 35mm camera and a complete darkroom.
         </p>
         <p>
           When he returned home from the service, the demands of his career took
@@ -55,7 +55,7 @@ export default function About() {
           className="w-full rounded-sm"
         />
         <figcaption className="mt-3 text-xs text-mist">
-          Morro Bay Christmas — home water.
+          Morro Bay Christmas — California’s central coast.
         </figcaption>
       </figure>
     </div>
