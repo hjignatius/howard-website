@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -9,6 +10,16 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-14 sm:py-20">
+      <Image
+        src="/images/mesa-arch.jpg"
+        alt="Sunrise beneath Mesa Arch, Canyonlands National Park, Utah"
+        width={1500}
+        height={761}
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        priority
+        className="mb-12 w-full rounded-sm"
+      />
+
       <h1 className="font-display text-3xl text-paper sm:text-4xl">Contact</h1>
 
       <div className="mt-10 grid gap-12 md:grid-cols-[1fr_260px]">
