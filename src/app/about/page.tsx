@@ -12,6 +12,16 @@ export default function About() {
     <div className="mx-auto max-w-3xl px-6 py-14 sm:py-20">
       <h1 className="font-display text-3xl text-paper sm:text-4xl">About</h1>
 
+      <Image
+        src="/images/howard-portrait.jpg"
+        alt="Howard Ignatius with his camera in front of the Teton Range in winter"
+        width={1500}
+        height={844}
+        sizes="(max-width: 768px) 100vw, 768px"
+        priority
+        className="mt-8 w-full rounded-sm"
+      />
+
       <div className="mt-8 space-y-6 text-base leading-relaxed text-mist">
         <p>
           Howard Ignatius is a retired high-tech marketing executive from
@@ -45,19 +55,6 @@ export default function About() {
         </p>
       </div>
 
-      <figure className="mt-14">
-        <Image
-          src="/images/gallery/morro-bay-christmas.jpg"
-          alt="Morro Bay Christmas"
-          width={1600}
-          height={1065}
-          sizes="(max-width: 768px) 100vw, 768px"
-          className="w-full rounded-sm"
-        />
-        <figcaption className="mt-3 text-xs text-mist">
-          Morro Bay Christmas — California’s central coast.
-        </figcaption>
-      </figure>
     </div>
   );
 }
