@@ -94,6 +94,50 @@ export default function Nocturnography() {
           of low-light photography.
         </p>
 
+        <figure className="my-12 not-prose">
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              {
+                src: "/images/night/nelson-mining-rig.jpg",
+                alt: "Star trails circling above a light-painted mining rig and vintage tanker truck",
+                w: 1600,
+                h: 1246,
+              },
+              {
+                src: "/images/night/nelson-gas-station.jpg",
+                alt: "An old gas station lit green and gold beneath circular star trails",
+                w: 1600,
+                h: 1445,
+              },
+              {
+                src: "/images/gallery/desert-driving.jpg",
+                alt: "Headlight trails sweeping through the desert under star trails",
+                w: 1600,
+                h: 1065,
+              },
+              {
+                src: "/images/night/milky-way-desert.jpg",
+                alt: "The Milky Way above desert rock, with the photographer's shadow light-painted on the stone",
+                w: 1600,
+                h: 1058,
+              },
+            ].map((img) => (
+              <Image
+                key={img.src}
+                src={img.src}
+                alt={img.alt}
+                width={img.w}
+                height={img.h}
+                sizes="(max-width: 640px) 100vw, 50vw"
+                className="w-full rounded-sm"
+              />
+            ))}
+          </div>
+          <figcaption className="mt-3 text-xs text-mist">
+            Light painting and star trails, Nelson, Nevada.
+          </figcaption>
+        </figure>
+
         <p>
           That is where the tagline “Finding Light In Darkness” comes from. There
           is a double meaning in it: finding the light in developing your own
