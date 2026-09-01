@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Howard Ignatius Photography",
     description:
-      "Landscape and night photography by Howard Ignatius, based in Morro Bay, California.",
+      "Landscape and night photography by Howard Ignatius, based in Lewes, Delaware.",
     url: "https://howardignatius.com",
     siteName: "Howard Ignatius Photography",
     type: "website",

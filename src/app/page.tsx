@@ -9,7 +9,7 @@ export default function Home() {
           Finding light in darkness
         </h1>
         <p className="mt-5 text-base leading-relaxed text-mist sm:text-lg">
-          Landscape and night photography from Morro Bay, California — and from
+          Landscape and night photography from Lewes, Delaware — and from
           wherever the light has been worth waiting for.
         </p>
       </section>
