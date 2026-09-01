@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Nocturnography",
@@ -29,6 +30,19 @@ export default function Nocturnography() {
           what to do the next day. Our photography was all done during daylight
           hours.
         </p>
+
+        <figure className="my-10 text-center">
+          <Image
+            src="/images/tholaria-amorgos.jpg"
+            alt="A white Greek church at night above the lights of Aigiali, Amorgos"
+            width={300}
+            height={201}
+            className="mx-auto rounded-sm"
+          />
+          <figcaption className="mt-3 text-xs text-mist">
+            Tholaria, Amorgos, Greece
+          </figcaption>
+        </figure>
 
         <p>
           Near the end of the tour we visited the island of Amorgos, not far from
