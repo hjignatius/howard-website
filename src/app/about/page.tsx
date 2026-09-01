@@ -41,17 +41,7 @@ export default function About() {
         <p>
           He now combines his love for photography with a strong technology
           background to complement his art in non-traditional and unique ways.
-          He has traveled the world extensively, and displays his work here and
-          at{" "}
-          <a
-            href="https://www.nocturnography.com"
-            className="text-paper underline decoration-line underline-offset-4 transition-colors hover:decoration-paper"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            nocturnography.com
-          </a>
-          .
+          He has traveled the world extensively, and displays his work here.
         </p>
       </div>
 

@@ -22,7 +22,7 @@ export default function Contact() {
 
       <h1 className="font-display text-3xl text-paper sm:text-4xl">Contact</h1>
 
-      <div className="mt-10 grid gap-12 md:grid-cols-[1fr_260px]">
+      <div className="mt-10 max-w-xl">
         <div>
           <p className="mb-8 text-base leading-relaxed text-mist">
             I want to hear from you. Fill out the form below and I&apos;ll get
@@ -30,20 +30,6 @@ export default function Contact() {
           </p>
           <ContactForm />
         </div>
-
-        <aside className="text-sm leading-relaxed text-mist">
-          <h2 className="mb-3 font-display text-base text-paper">Elsewhere</h2>
-          <p>
-            <a
-              href="https://www.nocturnography.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline decoration-line underline-offset-4 transition-colors hover:text-paper hover:decoration-paper"
-            >
-              nocturnography.com
-            </a>
-          </p>
-        </aside>
       </div>
     </div>
   );
