@@ -21,16 +21,7 @@ export default function Contact() {
         </div>
 
         <aside className="text-sm leading-relaxed text-mist">
-          <h2 className="mb-3 font-display text-base text-paper">By mail</h2>
-          <p>
-            Howard Ignatius
-            <br />
-            Morro Bay, CA 93442
-          </p>
-
-          <h2 className="mb-3 mt-8 font-display text-base text-paper">
-            Elsewhere
-          </h2>
+          <h2 className="mb-3 font-display text-base text-paper">Elsewhere</h2>
           <p>
             <a
               href="https://www.nocturnography.com"
