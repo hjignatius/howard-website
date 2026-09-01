@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# howardignatius.com
 
-## Getting Started
+Landscape and night photography by Howard Ignatius. Next.js 16 (App Router,
+React 19, Tailwind v4), deployed on Vercel. Migrated off Squarespace.
 
-First, run the development server:
+## Pages
+
+| Route | Source | Notes |
+| --- | --- | --- |
+| `/` | `src/app/page.tsx` | Gallery of 34 photographs with lightbox |
+| `/about` | `src/app/about/page.tsx` | Bio |
+| `/nocturnography` | `src/app/nocturnography/page.tsx` | "Finding Light In Darkness" essay |
+| `/contact` | `src/app/contact/page.tsx` | Form → `/api/contact` |
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Photographs
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Images live in `public/images/gallery/` at original resolution (~47 MB total)
+and are described by `src/data/gallery.ts` — title, caption, and intrinsic
+dimensions. Next.js `<Image>` handles resizing and format negotiation.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**To add a photograph:** drop the JPEG into `public/images/gallery/`, then add
+an entry to `src/data/gallery.ts`. `width` and `height` must match the file's
+real pixel dimensions or the layout will shift while loading:
 
-## Learn More
+```bash
+sips -g pixelWidth -g pixelHeight public/images/gallery/your-photo.jpg
+```
 
-To learn more about Next.js, take a look at the following resources:
+Ten of the 34 photographs have no title — they carry filename-derived slugs and
+render untitled. Fill in `title` in `src/data/gallery.ts` to name one.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact form
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`POST /api/contact` validates input, then sends via the
+[Resend](https://resend.com) REST API. It requires three environment variables
+(see `.env.example`):
 
-## Deploy on Vercel
+- `RESEND_API_KEY` — from the Resend dashboard
+- `CONTACT_TO_EMAIL` — where submissions are delivered
+- `CONTACT_FROM_EMAIL` — must be on a domain verified in Resend
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Without these the route returns 500 and the form shows a friendly error; the
+rest of the site is unaffected. A hidden `company` honeypot field silently
+absorbs bot submissions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Set the same three variables in **Vercel → Project → Settings → Environment
+Variables** for production.
+
+## Content provenance
+
+Copy and images were migrated from the Squarespace site. Typos in the original
+were corrected, and the contact and nocturnography pages were reworded where
+they referenced the old Squarespace layout. The blog (3 posts, last updated
+2015) and workshops page were intentionally not migrated.
